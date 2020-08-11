@@ -5,7 +5,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class todoListSeeder extends Seeder
+class TodoListSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,11 +14,9 @@ class todoListSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('TodoList')->insert([
+        DB::table('todo_lists')->insert([
 
             'name_list' => str::random(10)
-
-
         ]);
     }
 }

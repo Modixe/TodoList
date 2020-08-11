@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\todoListModel;
+use App\Model\TodoListModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 //Route::post('todoList','Api\todoListController@store');
 
 Route::namespace('Api')->group(function (){
-    Route::apiResource('todoListModel', 'todoListController');
+    Route::apiResource('todo_lists', 'TodoListController');
 });

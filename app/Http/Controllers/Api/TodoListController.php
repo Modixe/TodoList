@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\Model\todoListModel;
+use App\Model\TodoListModel;
 use App\Http\Controllers\Controller;
 
-class todoListController extends Controller
+class TodoListController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class todoListController extends Controller
 //    }
     public function index()
     {
-        return todoListModel::all();
+        return TodoListModel::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class todoListController extends Controller
      */
     public function store(Request $request)
     {
-        return todoListModel::create($request->only('name_list'));
+        return TodoListModel::create($request->only('name_list'));
 //        return response()->json(todoListModel::create($request->only('name_list')));
 
     }
@@ -42,7 +42,7 @@ class todoListController extends Controller
      */
     public function show($id)
     {
-        return todoListModel::findOrFail($id);
+        return TodoListModel::findOrFail($id);
     }
 
     /**
@@ -54,7 +54,7 @@ class todoListController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $todoList = todoListModel::findOrFail($id);
+        $todoList = TodoListModel::findOrFail($id);
         $todoList->update($request->only('name_list'));
     }
 
@@ -66,6 +66,6 @@ class todoListController extends Controller
      */
     public function destroy($id)
     {
-        todoListModel::findOrFail($id)->delete();
+        TodoListModel::findOrFail($id)->delete();
     }
 }

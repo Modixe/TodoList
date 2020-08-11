@@ -4,9 +4,9 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class todoListModel extends Model
+class TodoListModel extends Model
 {
-    protected $table = 'TodoList';
+    protected $table = 'todo_lists';
 
     public $timestamps = false;
 
