@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTaskListsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('task_lists', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name_list', 30);
+            $table->string('date_create', 15);
+            $table->string('date_update', 15);
+            $table->string('status', 10);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('task_lists');
+    }
+}
