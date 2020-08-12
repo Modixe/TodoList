@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\TodoListModel;
+use App\Model\TaskListModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Api')->group(function (){
     Route::apiResource('todo_lists', 'TodoListController');
+});
+Route::namespace('Api')->group(function (){
+    Route::apiResource('task_lists', 'TaskListController');
 });

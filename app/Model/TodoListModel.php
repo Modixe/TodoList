@@ -14,8 +14,5 @@ class TodoListModel extends Model
         'id',
         'name_list'
     ];
-//    protected $hidden = [
-//      'name_list'
-//    ];
 
 }
