@@ -20,6 +20,8 @@ class Task extends Model
     ];
 
     public function task_list(){
-        return $this->hasMany('App\Models\TaskList', 'id', 'list_id');
+//        return $this->hasMany('App\Model\TaskListModel', 'id', 'list_id');
+        return $this->hasMany(TaskList::class, 'id',
+            'list_id');
     }
 }

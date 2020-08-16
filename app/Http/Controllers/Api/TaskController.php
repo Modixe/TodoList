@@ -17,11 +17,11 @@ class TaskController extends Controller
 //    public function todoList(){
 //        return response()->json(todoListModel::get(), 200);
 //    }
-    public function index()
+    public function index(TaskList $task_list)
     {
-//        $list_id = TasksModel::find(2);
-//        dump($list_id->task_list);
-        return Task::all();
+        $list_id = Task::where('list_id', $task_list->id)->get();
+
+        return $list_id;
     }
 
     /**
@@ -38,12 +38,19 @@ class TaskController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param TaskList $task_list
+     * @param Task $task
+     * @return Task|\Illuminate\Http\JsonResponse|object
      */
-    public function show($id)
+    public function show(TaskList $task_list, Task $task)
     {
-        return Task::findOrFail($id);
+//
+        $list_i = Task::findOrFail($task->id);
+        return $list_i;
+
+//
+//        return $task;
+//        return response()->json($list_id)->setStatusCode(200, 'Successful Edited');
     }
 
     /**
