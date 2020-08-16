@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\TasksModel;
-use App\Model\TaskListModel;
+use App\Models\Task;
+use App\Models\TaskList;
 
 class TaskController extends Controller
 {
@@ -21,7 +21,7 @@ class TaskController extends Controller
     {
 //        $list_id = TasksModel::find(2);
 //        dump($list_id->task_list);
-        return TasksModel::all();
+        return Task::all();
     }
 
     /**
@@ -32,7 +32,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        return TasksModel::create($request->only('list_id', 'task_name'));
+        return Task::create($request->only('list_id', 'task_name'));
     }
 
     /**
@@ -43,7 +43,7 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        return TasksModel::findOrFail($id);
+        return Task::findOrFail($id);
     }
 
     /**
@@ -55,7 +55,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $todoList = TasksModel::findOrFail($id);
+        $todoList = Task::findOrFail($id);
         $todoList->update($request->only('name_list'));
     }
 
@@ -67,6 +67,6 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        TasksModel::findOrFail($id)->delete();
+        Task::findOrFail($id)->delete();
     }
 }

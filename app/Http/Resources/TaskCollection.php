@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Http\Controllers\Api\TaskListController;
-use App\Model\TasksModel;
+use App\Models\TasksModel;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class TaskCollection extends ResourceCollection

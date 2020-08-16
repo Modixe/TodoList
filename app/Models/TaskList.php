@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TaskListModel extends Model
+class TaskList extends Model
 {
     public $timestamps = true;
 
@@ -23,6 +23,6 @@ class TaskListModel extends Model
 //        return $this->hasOne('App\Model\TasksModel', 'list_id', 'id');
 //    }
     public function task_id(){
-        return $this->hasMany('App\Model\TasksModel', 'list_id', 'id');
+        return $this->hasMany('App\Models\Tasks', 'list_id', 'id');
     }
 }

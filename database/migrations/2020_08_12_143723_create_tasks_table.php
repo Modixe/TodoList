@@ -21,8 +21,7 @@ class CreateTasksTable extends Migration
             $table->string('task_name', 30);
             $table->string('description_task')->nullable();
             $table->string('urgency', '10')->nullable();
-            $table->string('state', '10')->nullable();
-
+            $table->string('state', '10')->default('Не готово');
 
             $table->Integer('list_id')->unsigned()->default(1)->index();
             $table->foreign('list_id')->references('id')->on('task_lists')->onDelete('cascade');

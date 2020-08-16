@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Model\TaskListModel;
-use App\Model\TasksModel;
+use App\Models\TaskList;
+use App\Models\Task;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -22,10 +22,10 @@ class TaskListController extends Controller
     public function test($id = NULL){
 
         if (!empty($id)){
-            $list_id = TaskListModel::find($id);
+            $list_id = TaskList::find($id);
             dump($list_id->task_id);
         }
-        return TaskListModel::all();
+        return TaskList::all();
 
 
     }
@@ -33,11 +33,11 @@ class TaskListController extends Controller
     public function index($id = NULL)
     {
         if (!empty($id)){
-            $list_id = TaskListModel::find($id);
+            $list_id = TaskList::find($id);
             $data = $list_id->task_id;
             return $data;
         }
-        return TaskListModel::all();
+        return TaskList::all();
 
     }
 
@@ -50,13 +50,13 @@ class TaskListController extends Controller
     public function store(Request $request)
     {
         if (!empty($request->task_list)){
-            $create_task = TasksModel::create([
+            $create_task = Task::create([
                 'list_id' => $request->task_list,
                 'task_name'=> $request->task_name
         ]);
             return $create_task;
         }
-        else  return TaskListModel::create($request->only('name_list', 'status'));
+        else  return TaskList::create($request->only('name_list', 'status'));
     }
 
     /**
@@ -68,10 +68,10 @@ class TaskListController extends Controller
     public function show($id, $task = null)
     {
         if (!empty($task)){
-            $list_id = TasksModel::findOrFail($task);
+            $list_id = Task::findOrFail($task);
             return $list_id;
         }
-        return TaskListModel::findOrFail($id);
+        return TaskList::findOrFail($id);
     }
 
     /**
@@ -83,7 +83,7 @@ class TaskListController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $todoList = TaskListModel::findOrFail($id);
+        $todoList = TaskList::findOrFail($id);
         $todoList->update($request->only('name_list'));
     }
 
@@ -93,11 +93,12 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, $task_id=null)
+    public function destroy(TaskList $list)
     {
-        if (!empty($task_id)){
-            TasksModel::findOrFail($task_id)->delete();
+        if (!empty($taskId)) {
+            Task::findOrFail($taskId)->delete();
+        } else {
+            TaskList::findOrFail($list)->delete();
         }
-        else TaskListModel::findOrFail($id)->delete();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\TaskListModel;
+use App\Models\TaskList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\TaskCollection as TaskResource;
@@ -12,7 +12,7 @@ Route::namespace('Api')->group(function (){
 
 Route::namespace('Api')->group(function (){
     Route::apiResource('task_lists', 'TaskListController');
-    Route::resource('task_lists.tasks', 'TaskListController');
+    Route::resource('task_lists.tasks', 'TasksController');
 //    Route::apiResource('/tasks', 'TaskListController');
 
 });
