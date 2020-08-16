@@ -17,7 +17,8 @@ class TaskListSeeder extends Seeder
     {
         DB::table('task_lists')->insert([
 
-            'name_list' => str::random(4),
+            'name_list' => 'a123',
+            'status' => '12d'
         ]);
     }
 }

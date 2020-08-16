@@ -21,14 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7c6706-e560-4401-81e3-22dcd72c496b" name="todoList" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/TaskListModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/TaskListSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/TaskCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/TasksModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_143723_create_tasks_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21/storage_v2/_src_/database/laravel.uWob_Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21/storage_v2/_src_/database/laravel.uWob_Q/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/TodoListModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/TodoListModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/TaskListModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/TaskListModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_185402_create_task_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_11_185402_create_task_lists_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TaskListSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TaskListSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,6 +185,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Model" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/database/migrations" />
     </key>
@@ -205,7 +209,8 @@
       <updated>1596740523185</updated>
       <workItem from="1596740525027" duration="22135000" />
       <workItem from="1597075653275" duration="2017000" />
-      <workItem from="1597169109137" duration="9897000" />
+      <workItem from="1597169109137" duration="40385000" />
+      <workItem from="1597485878033" duration="2634000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1597056030872</created>
@@ -242,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597174425832</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="API task_list">
+      <created>1597236592734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597236592734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,25 +299,26 @@
     <MESSAGE value="1.1" />
     <MESSAGE value="edit rename" />
     <MESSAGE value="Создания таблицы task lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создания таблицы task lists" />
+    <MESSAGE value="API task_list" />
+    <option name="LAST_COMMIT_MESSAGE" value="API task_list" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="973" y="558" width="604" height="357" key="#Notifications" timestamp="1597075836066">
+    <state x="973" y="558" width="604" height="357" key="#Notifications" timestamp="1597253942663">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="973" y="558" width="604" height="357" key="#Notifications/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075836066" />
-    <state x="875" y="395" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597072238253">
+    <state x="973" y="558" width="604" height="357" key="#Notifications/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597253942663" />
+    <state x="875" y="395" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597249920277">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="875" y="395" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072238253" />
+    <state x="875" y="395" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597249920277" />
     <state x="1470" y="27" width="618" height="1413" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597234062087">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1470" y="27" width="618" height="1413" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597234062087" />
-    <state x="1013" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597233972128">
+    <state x="1013" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597343814485">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="1013" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597233972128" />
+    <state x="1013" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597343814485" />
     <state x="100" y="127" width="2360" height="1213" key="DiffContextDialog" timestamp="1597075465777">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -350,22 +363,26 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1113" y="605" width="324" height="264" key="VCS.EditChangelistDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072767158" />
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597170071150">
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597236603011">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597170071150" />
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597236603011" />
     <state x="1121" y="605" width="377" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597235143606">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1121" y="605" width="377" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597235143606" />
-    <state x="1033" y="540" width="484" height="389" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1597169319487">
+    <state x="1033" y="540" width="484" height="392" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1597244197640">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="1033" y="540" width="484" height="389" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597169319487" />
+    <state x="1033" y="540" width="484" height="392" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597244197640" />
     <state x="1061" y="648" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597056683695">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1061" y="648" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597056683695" />
+    <state x="406" y="352" width="1459" height="988" key="dock-window-1" timestamp="1597331932199">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="406" y="352" width="1459" height="988" key="dock-window-1/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597331932199" />
     <state x="1026" y="623" width="497" height="228" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597056356812">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
