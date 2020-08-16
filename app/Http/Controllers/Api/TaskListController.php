@@ -49,8 +49,14 @@ class TaskListController extends Controller
      */
     public function store(Request $request)
     {
-        return TaskListModel::create($request->only('name_list', 'status'));
-//
+        if (!empty($request->task_list)){
+            $create_task = TasksModel::create([
+                'list_id' => $request->task_list,
+                'task_name'=> $request->task_name
+        ]);
+            return $create_task;
+        }
+        else  return TaskListModel::create($request->only('name_list', 'status'));
     }
 
     /**
@@ -59,7 +65,7 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $task = NULL)
+    public function show($id, $task = null)
     {
         if (!empty($task)){
             $list_id = TasksModel::findOrFail($task);
