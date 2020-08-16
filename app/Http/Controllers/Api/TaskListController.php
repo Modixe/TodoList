@@ -93,8 +93,11 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $task_id=null)
     {
-        TaskListModel::findOrFail($id)->delete();
+        if (!empty($task_id)){
+            TasksModel::findOrFail($task_id)->delete();
+        }
+        else TaskListModel::findOrFail($id)->delete();
     }
 }
