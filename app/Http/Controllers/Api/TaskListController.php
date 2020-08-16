@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Model\TaskListModel;
+use App\Model\TasksModel;
+use App\User;
 use Illuminate\Http\Request;
+
 
 class TaskListController extends Controller
 {
@@ -16,9 +19,26 @@ class TaskListController extends Controller
 //    public function todoList(){
 //        return response()->json(todoListModel::get(), 200);
 //    }
-    public function index()
-    {
+    public function test($id = NULL){
+
+        if (!empty($id)){
+            $list_id = TaskListModel::find($id);
+            dump($list_id->task_id);
+        }
         return TaskListModel::all();
+
+
+    }
+
+    public function index($id = NULL)
+    {
+        if (!empty($id)){
+            $list_id = TaskListModel::find($id);
+            $data = $list_id->task_id;
+            return $data;
+        }
+        return TaskListModel::all();
+
     }
 
     /**
@@ -31,7 +51,6 @@ class TaskListController extends Controller
     {
         return TaskListModel::create($request->only('name_list', 'status'));
 //
-
     }
 
     /**
@@ -40,8 +59,12 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $task = NULL)
     {
+        if (!empty($task)){
+            $list_id = TasksModel::findOrFail($task);
+            return $list_id;
+        }
         return TaskListModel::findOrFail($id);
     }
 

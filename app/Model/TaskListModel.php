@@ -19,4 +19,10 @@ class TaskListModel extends Model
 //        'date_create',
 //        'date_update'
 //    ];
+//    public function task_id(){
+//        return $this->hasOne('App\Model\TasksModel', 'list_id', 'id');
+//    }
+    public function task_id(){
+        return $this->hasMany('App\Model\TasksModel', 'list_id', 'id');
+    }
 }
