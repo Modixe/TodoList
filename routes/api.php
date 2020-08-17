@@ -12,7 +12,8 @@ Route::namespace('Api')->group(function (){
 
 Route::namespace('Api')->group(function (){
     Route::apiResource('task_lists', 'TaskListController');
-    Route::resource('task_lists.tasks', 'TasksController');
+
+    Route::apiResource('task_lists.tasks', 'TaskController');
 //    Route::apiResource('/tasks', 'TaskListController');
 
 });

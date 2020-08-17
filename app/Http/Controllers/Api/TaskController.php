@@ -3,15 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\TaskList;
+use Illuminate\Http\Response;
 
 class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param TaskList $task_list
      * @return string
      */
 //    public function todoList(){
@@ -20,19 +23,27 @@ class TaskController extends Controller
     public function index(TaskList $task_list)
     {
         $list_id = Task::where('list_id', $task_list->id)->get();
-
         return $list_id;
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param TaskList $task_list
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request, TaskList $task_list)
     {
-        return Task::create($request->only('list_id', 'task_name'));
+        $create_task = Task::create ([
+            'list_id' => $request->task_list->id,
+            'task_name'=> $request->task_name,
+            'state'=> $request->state,
+            'description_task'=>$request->description_task,
+            'urgency'=>$request->urgency
+        ]);
+//        dd($task_list, $request, $create_task);
+        return $create_task;
     }
 
     /**
@@ -40,7 +51,7 @@ class TaskController extends Controller
      *
      * @param TaskList $task_list
      * @param Task $task
-     * @return Task|\Illuminate\Http\JsonResponse|object
+     * @return Task|JsonResponse|object
      */
     public function show(TaskList $task_list, Task $task)
     {
@@ -56,24 +67,32 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param int $id
+     * @return void
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, TaskList $taskList, Task $task)
     {
-        $todoList = Task::findOrFail($id);
-        $todoList->update($request->only('name_list'));
+        $update_task = Task::findOrFail($task->id);
+        $update_task->update ($request->only(
+            'task_name',
+            'description_task',
+            'urgency',
+            'state'
+        ));
+
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return void
      */
-    public function destroy($id)
+    public function destroy(TaskList $taskList, Task $task)
     {
-        Task::findOrFail($id)->delete();
+        Task::findOrFail($task->id)->delete();
     }
 }

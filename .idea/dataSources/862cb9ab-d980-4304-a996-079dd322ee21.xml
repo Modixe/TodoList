@@ -1408,19 +1408,19 @@ true posix/WET
 false posix/Zulu
 true posixrules
 </TimeZones>
-      <StartupTime>1597167663</StartupTime>
+      <StartupTime>1597485827</StartupTime>
     </root>
     <database id="2" parent="1" name="laravel">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>905</IntrospectionStateNumber>
+      <IntrospectionStateNumber>972</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24635|24637|1
 sequence|table|32801|32803|1
-sequence|table|33192|33194|1
-sequence|table|33205|33207|1
-sequence|table|33213|33215|1
-sequence|table|33222|33224|1
+sequence|table|41015|41017|1
+sequence|table|41028|41030|1
+sequence|table|41036|41038|1
+sequence|table|41045|41047|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -1484,7 +1484,7 @@ TimeZone=UTC</Config>
       <Comment>standard public schema</Comment>
       <StateNumber>275</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>906</IntrospectionStateNumber>
+      <IntrospectionStateNumber>973</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">
@@ -1567,27 +1567,27 @@ TimeZone=UTC</Config>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="31" parent="16" name="task_lists_id_seq">
-      <ObjectId>33213</ObjectId>
+      <ObjectId>41036</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="32" parent="16" name="tasks_id_seq">
-      <ObjectId>33222</ObjectId>
+      <ObjectId>41045</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="33" parent="16" name="todo_lists_id_seq">
-      <ObjectId>33205</ObjectId>
+      <ObjectId>41028</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>894</StateNumber>
+      <StateNumber>920</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="34" parent="16" name="users_id_seq">
-      <ObjectId>33192</ObjectId>
+      <ObjectId>41015</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <table id="35" parent="16" name="failed_jobs">
@@ -1601,26 +1601,24 @@ TimeZone=UTC</Config>
       <StateNumber>567</StateNumber>
     </table>
     <table id="37" parent="16" name="task_lists">
-      <ObjectId>33215</ObjectId>
+      <ObjectId>41038</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
     </table>
     <table id="38" parent="16" name="tasks">
-      <ObjectId>33224</ObjectId>
-      <Outdated>1</Outdated>
+      <ObjectId>41047</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
     </table>
     <table id="39" parent="16" name="todo_lists">
-      <ObjectId>33207</ObjectId>
-      <Outdated>1</Outdated>
+      <ObjectId>41030</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>894</StateNumber>
+      <StateNumber>920</StateNumber>
     </table>
     <table id="40" parent="16" name="users">
-      <ObjectId>33194</ObjectId>
+      <ObjectId>41017</ObjectId>
       <Owner>admin</Owner>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
     </table>
     <column id="41" parent="35" name="id">
       <Position>1</Position>
@@ -1720,7 +1718,7 @@ TimeZone=UTC</Config>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <DefaultExpression>nextval(&apos;task_lists_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1728,45 +1726,45 @@ TimeZone=UTC</Config>
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="56" parent="37" name="status">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <DefaultExpression>&apos;Не готово&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
     <column id="57" parent="37" name="remember_token">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="58" parent="37" name="created_at">
       <Position>5</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="59" parent="37" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>896</StateNumber>
+      <StateNumber>922</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="60" parent="37" name="task_lists_pkey">
-      <ObjectId>33220</ObjectId>
-      <StateNumber>896</StateNumber>
+      <ObjectId>41043</ObjectId>
+      <StateNumber>922</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="61" parent="37" name="task_lists_pkey">
-      <ObjectId>33221</ObjectId>
-      <StateNumber>896</StateNumber>
+      <ObjectId>41044</ObjectId>
+      <StateNumber>922</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>task_lists_pkey</UnderlyingIndexName>
@@ -1775,7 +1773,7 @@ TimeZone=UTC</Config>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <DefaultExpression>nextval(&apos;tasks_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1783,177 +1781,182 @@ TimeZone=UTC</Config>
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="64" parent="38" name="description_task">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="65" parent="38" name="urgency">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="66" parent="38" name="state">
       <Position>5</Position>
       <DataType>varchar(10)|0s</DataType>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="67" parent="38" name="list_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <DefaultExpression>1</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="68" parent="38" name="created_at">
       <Position>7</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="69" parent="38" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>898</StateNumber>
+      <StateNumber>924</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="70" parent="38" name="tasks_pkey">
-      <ObjectId>33229</ObjectId>
-      <StateNumber>898</StateNumber>
+      <ObjectId>41052</ObjectId>
+      <StateNumber>924</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="71" parent="38" name="tasks_pkey">
-      <ObjectId>33230</ObjectId>
-      <StateNumber>898</StateNumber>
+    <index id="71" parent="38" name="tasks_list_id_index">
+      <ObjectId>41059</ObjectId>
+      <StateNumber>924</StateNumber>
+      <ColNames>list_id</ColNames>
+    </index>
+    <key id="72" parent="38" name="tasks_pkey">
+      <ObjectId>41053</ObjectId>
+      <StateNumber>924</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tasks_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="72" parent="38" name="tasks_list_id_foreign">
-      <ObjectId>33231</ObjectId>
-      <StateNumber>898</StateNumber>
+    <foreign-key id="73" parent="38" name="tasks_list_id_foreign">
+      <ObjectId>41054</ObjectId>
+      <StateNumber>924</StateNumber>
       <ColNames>list_id</ColNames>
-      <RefTableId>33215</RefTableId>
+      <RefTableId>41038</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>task_lists</RefTableName>
       <RefKeyName>task_lists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="73" parent="39" name="id">
+    <column id="74" parent="39" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>894</StateNumber>
+      <StateNumber>920</StateNumber>
       <DefaultExpression>nextval(&apos;todo_lists_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="74" parent="39" name="name_list">
+    <column id="75" parent="39" name="name_list">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>894</StateNumber>
+      <StateNumber>920</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="75" parent="39" name="todo_lists_pkey">
-      <ObjectId>33211</ObjectId>
-      <StateNumber>894</StateNumber>
+    <index id="76" parent="39" name="todo_lists_pkey">
+      <ObjectId>41034</ObjectId>
+      <StateNumber>920</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="76" parent="39" name="todo_lists_pkey">
-      <ObjectId>33212</ObjectId>
-      <StateNumber>894</StateNumber>
+    <key id="77" parent="39" name="todo_lists_pkey">
+      <ObjectId>41035</ObjectId>
+      <StateNumber>920</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>todo_lists_pkey</UnderlyingIndexName>
     </key>
-    <column id="77" parent="40" name="id">
+    <column id="78" parent="40" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="78" parent="40" name="name">
+    <column id="79" parent="40" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="79" parent="40" name="email">
+    <column id="80" parent="40" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="80" parent="40" name="email_verified_at">
+    <column id="81" parent="40" name="email_verified_at">
       <Position>4</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="81" parent="40" name="password">
+    <column id="82" parent="40" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="40" name="remember_token">
+    <column id="83" parent="40" name="remember_token">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="83" parent="40" name="created_at">
+    <column id="84" parent="40" name="created_at">
       <Position>7</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="84" parent="40" name="updated_at">
+    <column id="85" parent="40" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>892</StateNumber>
+      <StateNumber>918</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="85" parent="40" name="users_pkey">
-      <ObjectId>33201</ObjectId>
-      <StateNumber>892</StateNumber>
+    <index id="86" parent="40" name="users_pkey">
+      <ObjectId>41024</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="86" parent="40" name="users_email_unique">
-      <ObjectId>33203</ObjectId>
-      <StateNumber>892</StateNumber>
+    <index id="87" parent="40" name="users_email_unique">
+      <ObjectId>41026</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="87" parent="40" name="users_pkey">
-      <ObjectId>33202</ObjectId>
-      <StateNumber>892</StateNumber>
+    <key id="88" parent="40" name="users_pkey">
+      <ObjectId>41025</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <key id="88" parent="40" name="users_email_unique">
-      <ObjectId>33204</ObjectId>
-      <StateNumber>892</StateNumber>
+    <key id="89" parent="40" name="users_email_unique">
+      <ObjectId>41027</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>

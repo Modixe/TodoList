@@ -23,6 +23,6 @@ class TaskList extends Model
 //        return $this->hasOne('App\Model\TasksModel', 'list_id', 'id');
 //    }
     public function task_id(){
-        return $this->hasMany('App\Models\Tasks', 'list_id', 'id');
+        return $this->hasMany('App\Model\TasksModel', 'list_id', 'id');
     }
 }

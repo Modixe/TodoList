@@ -16,29 +16,9 @@ class TaskListController extends Controller
      *
      * @return string
      */
-//    public function todoList(){
-//        return response()->json(todoListModel::get(), 200);
-//    }
-    public function test($id = NULL){
 
-        if (!empty($id)){
-            $list_id = TaskList::find($id);
-            dump($list_id->task_id);
-        }
+    public function index() {
         return TaskList::all();
-
-
-    }
-
-    public function index($id = NULL)
-    {
-        if (!empty($id)){
-            $list_id = TaskList::find($id);
-            $data = $list_id->task_id;
-            return $data;
-        }
-        return TaskList::all();
-
     }
 
     /**
@@ -49,14 +29,7 @@ class TaskListController extends Controller
      */
     public function store(Request $request)
     {
-        if (!empty($request->task_list)){
-            $create_task = Task::create([
-                'list_id' => $request->task_list,
-                'task_name'=> $request->task_name
-        ]);
-            return $create_task;
-        }
-        else  return TaskList::create($request->only('name_list', 'status'));
+        return TaskList::create($request->only('name_list', 'status'));
     }
 
     /**
@@ -65,12 +38,12 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $task = null)
+    public function show($id)
     {
-        if (!empty($task)){
-            $list_id = Task::findOrFail($task);
-            return $list_id;
-        }
+//        if (!empty($task)){
+//            $list_id = Task::findOrFail($task);
+//            return $list_id;
+//        }
         return TaskList::findOrFail($id);
     }
 
@@ -84,7 +57,10 @@ class TaskListController extends Controller
     public function update(Request $request, $id)
     {
         $todoList = TaskList::findOrFail($id);
-        $todoList->update($request->only('name_list'));
+        $todoList->update($request->only(
+            'name_list',
+            'status'
+        ));
     }
 
     /**
@@ -93,12 +69,9 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TaskList $list)
+    public function destroy(TaskList $task_list)
     {
-        if (!empty($taskId)) {
-            Task::findOrFail($taskId)->delete();
-        } else {
-            TaskList::findOrFail($list)->delete();
-        }
+        TaskList::findOrFail($task_list->id)->delete();
+
     }
 }
