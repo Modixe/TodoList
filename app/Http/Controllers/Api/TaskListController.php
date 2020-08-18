@@ -4,15 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\TaskList;
-use App\Models\Task;
-use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\Response;
 
 class TaskListController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Вывести весь список ресурса.
      *
      * @return string
      */
@@ -22,56 +20,51 @@ class TaskListController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохраните вновь созданный ресурс в хранилище.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         return TaskList::create($request->only('name_list', 'status'));
     }
 
     /**
-     * Display the specified resource.
+     * Отобразить указанный ресурс.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function show($id)
-    {
-//        if (!empty($task)){
-//            $list_id = Task::findOrFail($task);
-//            return $list_id;
-//        }
+
+    public function show($id) {
         return TaskList::findOrFail($id);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Обновить указанный ресурс в хранилище.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request, $id)
-    {
-        $todoList = TaskList::findOrFail($id);
-        $todoList->update($request->only(
+
+    public function update(Request $request, $id) {
+        $task_List = TaskList::findOrFail($id);
+        $task_List->update($request->only(
             'name_list',
             'status'
         ));
+        return $task_List;
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Удалите указанный ресурс из хранилища.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param TaskList $task_list
+     * @return void
      */
-    public function destroy(TaskList $task_list)
-    {
-        TaskList::findOrFail($task_list->id)->delete();
 
+    public function destroy(TaskList $task_list) {
+        TaskList::findOrFail($task_list->id)->delete();
     }
 }
