@@ -45,11 +45,12 @@ class TaskController extends Controller
     /**
      * Отобразить указанный ресурс.
      *
+     * @param TaskList $taskList
      * @param Task $task
      * @return Task|JsonResponse|object
      */
 
-    public function show(Task $task) {
+    public function show(TaskList $taskList,Task $task) {
         $lists= Task::findOrFail($task->id);
         return $lists;
     }

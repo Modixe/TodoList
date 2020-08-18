@@ -21,17 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7c6706-e560-4401-81e3-22dcd72c496b" name="todoList" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/TaskCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/TasksModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_143723_create_tasks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21/storage_v2/_src_/database/laravel.uWob_Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/862cb9ab-d980-4304-a996-079dd322ee21/storage_v2/_src_/database/laravel.uWob_Q/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/TaskListModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/TaskListModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_185402_create_task_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_11_185402_create_task_lists_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TaskListSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TaskListSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,12 +169,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/app/Model" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/database/migrations" />
@@ -210,7 +201,7 @@
       <workItem from="1596740525027" duration="22135000" />
       <workItem from="1597075653275" duration="2017000" />
       <workItem from="1597169109137" duration="40385000" />
-      <workItem from="1597485878033" duration="2634000" />
+      <workItem from="1597485878033" duration="42728000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1597056030872</created>
@@ -254,7 +245,77 @@
       <option name="project" value="LOCAL" />
       <updated>1597236592734</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавление вложенного URL">
+      <created>1597575124202</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597575124202</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v.1.3">
+      <created>1597575147327</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597575147327</updated>
+    </task>
+    <task id="LOCAL-00009" summary="POST(List,Task)">
+      <created>1597579760023</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597579760023</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Delete(List,Task)">
+      <created>1597580632377</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597580632377</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rename">
+      <created>1597586857401</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597586857401</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Get index task">
+      <created>1597598787061</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597598787061</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Обновлен основной функционал&#10;Разбил по контроллерам">
+      <created>1597693579941</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597693579941</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Рефактор кода">
+      <created>1597771779602</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597771779602</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Рефактор кода 1.1">
+      <created>1597771926995</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597771926995</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Рефактор кода 1.0">
+      <created>1597772557119</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597772557119</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,9 +361,23 @@
     <MESSAGE value="edit rename" />
     <MESSAGE value="Создания таблицы task lists" />
     <MESSAGE value="API task_list" />
-    <option name="LAST_COMMIT_MESSAGE" value="API task_list" />
+    <MESSAGE value="Добавление вложенного URL" />
+    <MESSAGE value="v.1.3" />
+    <MESSAGE value="POST(List,Task)" />
+    <MESSAGE value="Delete(List,Task)" />
+    <MESSAGE value="rename" />
+    <MESSAGE value="Get index task" />
+    <MESSAGE value="Обновлен основной функционал&#10;Разбил по контроллерам" />
+    <MESSAGE value="Рефактор кода" />
+    <MESSAGE value="Рефактор кода 1.1" />
+    <MESSAGE value="Рефактор кода 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефактор кода 1.0" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="909" y="415" width="732" height="644" key="#Inspections" timestamp="1597772237080">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="909" y="415" width="732" height="644" key="#Inspections/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597772237080" />
     <state x="973" y="558" width="604" height="357" key="#Notifications" timestamp="1597253942663">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -323,10 +398,10 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="100" y="127" width="2360" height="1213" key="DiffContextDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075465777" />
-    <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl" timestamp="1597073045684">
+    <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl" timestamp="1597489243833">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597073045684" />
+    <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597489243833" />
     <state x="1071" y="654" width="417" height="194" key="Github.CreateGistDialog" timestamp="1597073083804">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -363,10 +438,10 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1113" y="605" width="324" height="264" key="VCS.EditChangelistDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072767158" />
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597236603011">
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597772562395">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597236603011" />
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597772562395" />
     <state x="1121" y="605" width="377" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597235143606">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -379,10 +454,22 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1061" y="648" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597056683695" />
-    <state x="406" y="352" width="1459" height="988" key="dock-window-1" timestamp="1597331932199">
+    <state x="2560" y="0" width="1920" height="1080" key="dock-window-1" timestamp="1597773150135">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2560" y="0" width="1920" height="1080" key="dock-window-1/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597773150135" />
+    <state x="1608" y="108" width="1467" height="1053" key="dock-window-2" timestamp="1597773150135">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="406" y="352" width="1459" height="988" key="dock-window-1/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597331932199" />
+    <state x="1608" y="108" width="1467" height="1053" key="dock-window-2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597773150135" />
+    <state x="2601" y="96" width="1584" height="940" key="dock-window-3" timestamp="1597773150135">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2601" y="96" width="1584" height="940" key="dock-window-3/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597773150135" />
+    <state x="2669" y="0" width="1546" height="1080" key="dock-window-4" timestamp="1597773150135">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2669" y="0" width="1546" height="1080" key="dock-window-4/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597773150135" />
     <state x="1026" y="623" width="497" height="228" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597056356812">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
