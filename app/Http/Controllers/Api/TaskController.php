@@ -12,7 +12,7 @@ use Illuminate\Http\Response;
 class TaskController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Вывести весь список ресурса.
      *
      * @param TaskList $task_list
      * @return string
@@ -28,6 +28,7 @@ class TaskController extends Controller
      *
      * @param Request $request
      * @return Response
+     *
      */
 
     public function store(Request $request) {
