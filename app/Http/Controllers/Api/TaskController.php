@@ -17,24 +17,20 @@ class TaskController extends Controller
      * @param TaskList $task_list
      * @return string
      */
-//    public function todoList(){
-//        return response()->json(todoListModel::get(), 200);
-//    }
-    public function index(TaskList $task_list)
-    {
-        $list_id = Task::where('list_id', $task_list->id)->get();
-        return $list_id;
+
+    public function index(TaskList $task_list) {
+        $all_lists = Task::where('list_id', $task_list->id)->get();
+        return $all_lists;
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохраните вновь созданный ресурс в хранилище.
      *
      * @param Request $request
-     * @param TaskList $task_list
      * @return Response
      */
-    public function store(Request $request, TaskList $task_list)
-    {
+
+    public function store(Request $request) {
         $create_task = Task::create ([
             'list_id' => $request->task_list->id,
             'task_name'=> $request->task_name,
@@ -42,37 +38,30 @@ class TaskController extends Controller
             'description_task'=>$request->description_task,
             'urgency'=>$request->urgency
         ]);
-//        dd($task_list, $request, $create_task);
         return $create_task;
     }
 
     /**
-     * Display the specified resource.
+     * Отобразить указанный ресурс.
      *
-     * @param TaskList $task_list
      * @param Task $task
      * @return Task|JsonResponse|object
      */
-    public function show(TaskList $task_list, Task $task)
-    {
-//
-        $list_i = Task::findOrFail($task->id);
-        return $list_i;
 
-//
-//        return $task;
-//        return response()->json($list_id)->setStatusCode(200, 'Successful Edited');
+    public function show(Task $task) {
+        $lists= Task::findOrFail($task->id);
+        return $lists;
     }
 
     /**
-     * Update the specified resource in storage.
+     * Обновить указанный ресурс в хранилище.
      *
      * @param Request $request
-     * @param int $id
+     * @param Task $task
      * @return void
      */
-    public function update(Request $request, TaskList $taskList, Task $task)
-    {
+
+    public function update(Request $request, Task $task) {
         $update_task = Task::findOrFail($task->id);
         $update_task->update ($request->only(
             'task_name',
@@ -80,19 +69,16 @@ class TaskController extends Controller
             'urgency',
             'state'
         ));
-
-
-
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Удалите указанный ресурс из хранилища.
      *
-     * @param int $id
+     * @param Task $task
      * @return void
      */
-    public function destroy(TaskList $taskList, Task $task)
-    {
+
+    public function destroy(Task $task) {
         Task::findOrFail($task->id)->delete();
     }
 }
