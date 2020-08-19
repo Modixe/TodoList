@@ -17,8 +17,10 @@ class TaskController extends Controller
      * @param TaskList $task_list
      * @return string
      */
-    public function index(TaskList $task_list) {
+    public function index(TaskList $task_list)
+    {
         $all_tasks = Task::where('list_id', $task_list->id)->get();
+
         return $all_tasks;
     }
     /**
@@ -27,14 +29,16 @@ class TaskController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request) {
-        $create_task = Task::create ([
+    public function store(Request $request)
+    {
+        $create_task = Task::create([
             'list_id'          => $request->task_list->id,
             'task_name'        => $request->task_name,
             'state'            => $request->state,
             'description_task' => $request->description_task,
             'urgency'          => $request->urgency
         ]);
+
         return $create_task;
     }
 
@@ -45,8 +49,10 @@ class TaskController extends Controller
      * @param Task $task
      * @return Task|JsonResponse|object
      */
-    public function show(TaskList $taskList,Task $task) {
+    public function show(TaskList $taskList, Task $task)
+    {
         $lists= Task::findOrFail($task->id);
+
         return $lists;
     }
 
@@ -57,7 +63,8 @@ class TaskController extends Controller
      * @param Task $task
      * @return void
      */
-    public function update(Request $request, Task $task) {
+    public function update(Request $request, Task $task)
+    {
         $update_task = Task::findOrFail($task->id);
         $update_task->update ($request->only(
             'task_name',
@@ -73,7 +80,8 @@ class TaskController extends Controller
      * @param Task $task
      * @return void
      */
-    public function destroy(Task $task) {
+    public function destroy(Task $task)
+    {
         Task::findOrFail($task->id)->delete();
     }
 }
