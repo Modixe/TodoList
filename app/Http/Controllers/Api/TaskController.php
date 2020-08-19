@@ -13,6 +13,7 @@ class TaskController extends Controller
 {
     /**
      * Вывести весь список ресурса.
+     *
      * @param TaskList $task_list
      * @return string
      */
@@ -22,9 +23,9 @@ class TaskController extends Controller
     }
     /**
      * Сохраните вновь созданный ресурс в хранилище.
+     *
      * @param Request $request
      * @return Response
-     *
      */
     public function store(Request $request) {
         $create_task = Task::create ([
@@ -39,6 +40,7 @@ class TaskController extends Controller
 
     /**
      * Отобразить указанный ресурс.
+     *
      * @param TaskList $taskList
      * @param Task $task
      * @return Task|JsonResponse|object
@@ -50,6 +52,7 @@ class TaskController extends Controller
 
     /**
      * Обновить указанный ресурс в хранилище.
+     *
      * @param Request $request
      * @param Task $task
      * @return void
