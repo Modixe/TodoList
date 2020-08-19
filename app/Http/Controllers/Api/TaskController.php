@@ -13,35 +13,32 @@ class TaskController extends Controller
 {
     /**
      * Вывести весь список ресурса.
-     *
      * @param TaskList $task_list
      * @return string
      */
     public function index(TaskList $task_list) {
-        $all_lists = Task::where('list_id', $task_list->id)->get();
-        return $all_lists;
+        $all_tasks = Task::where('list_id', $task_list->id)->get();
+        return $all_tasks;
     }
     /**
      * Сохраните вновь созданный ресурс в хранилище.
-     *
      * @param Request $request
      * @return Response
      *
      */
     public function store(Request $request) {
         $create_task = Task::create ([
-            'list_id' => $request->task_list->id,
-            'task_name'=> $request->task_name,
-            'state'=> $request->state,
-            'description_task'=>$request->description_task,
-            'urgency'=>$request->urgency
+            'list_id'          => $request->task_list->id,
+            'task_name'        => $request->task_name,
+            'state'            => $request->state,
+            'description_task' => $request->description_task,
+            'urgency'          => $request->urgency
         ]);
         return $create_task;
     }
 
     /**
      * Отобразить указанный ресурс.
-     *
      * @param TaskList $taskList
      * @param Task $task
      * @return Task|JsonResponse|object
@@ -53,7 +50,6 @@ class TaskController extends Controller
 
     /**
      * Обновить указанный ресурс в хранилище.
-     *
      * @param Request $request
      * @param Task $task
      * @return void
