@@ -66,7 +66,7 @@ class TaskController extends Controller
     public function update(Request $request, Task $task)
     {
         $update_task = Task::findOrFail($task->id);
-        $update_task->update ($request->only(
+        $update_task->update($request->only(
             'task_name',
             'description_task',
             'urgency',
@@ -82,6 +82,6 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        Task::findOrFail($task->id)->delete();
+        $task->delete();
     }
 }
