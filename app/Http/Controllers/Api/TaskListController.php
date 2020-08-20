@@ -14,8 +14,8 @@ class TaskListController extends Controller
      *
      * @return string
      */
-
-    public function index() {
+    public function index()
+    {
         return TaskList::all();
     }
 
@@ -25,7 +25,8 @@ class TaskListController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         return TaskList::create($request->only('name_list', 'status'));
     }
 
@@ -35,8 +36,8 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return Response
      */
-
-    public function show($id) {
+    public function show($id)
+    {
         return TaskList::findOrFail($id);
     }
 
@@ -47,8 +48,8 @@ class TaskListController extends Controller
      * @param  int  $id
      * @return Response
      */
-
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         $task_List = TaskList::findOrFail($id);
         $task_List->update($request->only(
             'name_list',
@@ -63,8 +64,8 @@ class TaskListController extends Controller
      * @param TaskList $task_list
      * @return void
      */
-
-    public function destroy(TaskList $task_list) {
+    public function destroy(TaskList $task_list)
+    {
         TaskList::findOrFail($task_list->id)->delete();
     }
 }
