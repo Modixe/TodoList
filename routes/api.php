@@ -7,7 +7,6 @@ use App\Http\Resources\TaskCollection as TaskResource;
 
 
 Route::namespace('Api')->group(function (){
-    Route::apiResource('todo_lists', 'TodoListController');
     Route::apiResource('task_lists', 'TaskListController');
     Route::apiResource('task_lists.tasks', 'TaskController');
 });
