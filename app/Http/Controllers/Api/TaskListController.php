@@ -16,7 +16,7 @@ class TaskListController extends Controller
      */
     public function index()
     {
-        return TaskList::all();
+        return response(TaskList::all(), 200);
     }
 
     /**
@@ -27,7 +27,8 @@ class TaskListController extends Controller
      */
     public function store(Request $request)
     {
-        return TaskList::create($request->only('name_list', 'status'));
+        $create_task_list = TaskList::create($request->only('name_list', 'status'));
+        return response($create_task_list, 201);
     }
 
     /**
@@ -38,7 +39,8 @@ class TaskListController extends Controller
      */
     public function show($id)
     {
-        return TaskList::findOrFail($id);
+        $show_tasl_list = TaskList::findOrFail($id);
+        return response($show_tasl_list, 200);
     }
 
     /**
@@ -55,6 +57,7 @@ class TaskListController extends Controller
             'name_list',
             'status'
         ));
+
         return $task_List;
     }
 

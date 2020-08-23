@@ -23,23 +23,25 @@ class TaskController extends Controller
 
         return $all_tasks;
     }
+
     /**
      * Сохраните вновь созданный ресурс в хранилище.
      *
      * @param Request $request
+     * @param TaskList $task_list
      * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request,TaskList $task_list)
     {
-        $create_task = Task::create([
-            'list_id'          => $request->task_list->id,
-            'task_name'        => $request->task_name,
-            'state'            => $request->state,
-            'description_task' => $request->description_task,
-            'urgency'          => $request->urgency
-        ]);
-
-        return $create_task;
+        return response(
+            Task::create([
+                'list_id'          => $task_list->id,
+                'task_name'        => $request->task_name,
+                'state'            => $request->state,
+                'description_task' => $request->description_task,
+                'urgency'          => $request->urgency
+            ])
+        , 201);
     }
 
     /**
@@ -51,9 +53,7 @@ class TaskController extends Controller
      */
     public function show(TaskList $taskList, Task $task)
     {
-        $lists= Task::findOrFail($task->id);
-
-        return $lists;
+        return Task::findOrFail($task->id);
     }
 
     /**

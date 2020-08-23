@@ -21,10 +21,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7c6706-e560-4401-81e3-22dcd72c496b" name="todoList" comment="1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/TaskList.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TaskList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +79,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,6 +182,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fjnleNN2xlURZdKpIPwWZmS1R3" />
@@ -173,7 +201,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -204,7 +232,9 @@
       <workItem from="1597075653275" duration="2017000" />
       <workItem from="1597169109137" duration="40385000" />
       <workItem from="1597485878033" duration="42728000" />
-      <workItem from="1597773509334" duration="4076000" />
+      <workItem from="1597773509334" duration="10054000" />
+      <workItem from="1598177242292" duration="46000" />
+      <workItem from="1598177323475" duration="2499000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1597056030872</created>
@@ -360,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597859457083</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Рефактор кода 1.3">
+      <created>1597936234739</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597936234739</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +454,8 @@
     <MESSAGE value="Рефактор кода 1.1" />
     <MESSAGE value="Рефактор кода 1.0" />
     <MESSAGE value="Рефактор кода 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Рефактор кода 1.2" />
+    <MESSAGE value="Рефактор кода 1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефактор кода 1.3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="909" y="415" width="732" height="644" key="#Inspections" timestamp="1597772237080">
@@ -444,10 +482,11 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="100" y="127" width="2360" height="1213" key="DiffContextDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075465777" />
-    <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl" timestamp="1597489243833">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state x="1042" y="452" width="447" height="505" key="FileChooserDialogImpl" timestamp="1598179662455">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597489243833" />
+    <state x="1042" y="452" key="FileChooserDialogImpl/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598179662455" />
     <state x="1071" y="654" width="417" height="194" key="Github.CreateGistDialog" timestamp="1597073083804">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -456,26 +495,31 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1141" y="633" width="277" height="207" key="Github.ShareDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597054704806" />
-    <state width="1280" height="402" key="GridCell.Tab.0.bottom" timestamp="1597075833009">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state width="2514" height="393" key="GridCell.Tab.0.bottom" timestamp="1598178957605">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state width="1280" height="402" key="GridCell.Tab.0.bottom/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075833009" />
-    <state width="1280" height="402" key="GridCell.Tab.0.center" timestamp="1597075833009">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state width="2514" height="393" key="GridCell.Tab.0.bottom/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598178957605" />
+    <state width="2514" height="393" key="GridCell.Tab.0.center" timestamp="1598178957605">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state width="1280" height="402" key="GridCell.Tab.0.center/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075833009" />
-    <state width="1280" height="402" key="GridCell.Tab.0.left" timestamp="1597075833009">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state width="2514" height="393" key="GridCell.Tab.0.center/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598178957605" />
+    <state width="2514" height="393" key="GridCell.Tab.0.left" timestamp="1598178957605">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state width="1280" height="402" key="GridCell.Tab.0.left/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075833009" />
-    <state width="1280" height="402" key="GridCell.Tab.0.right" timestamp="1597075833009">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state width="2514" height="393" key="GridCell.Tab.0.left/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598178957605" />
+    <state width="2514" height="393" key="GridCell.Tab.0.right" timestamp="1598178957605">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state width="1280" height="402" key="GridCell.Tab.0.right/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075833009" />
-    <state x="682" y="205" width="1022" height="737" key="SettingsEditor" timestamp="1597072447237">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state width="2514" height="393" key="GridCell.Tab.0.right/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598178957605" />
+    <state x="682" y="208" width="1022" height="737" key="SettingsEditor" timestamp="1598179872331">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state x="682" y="205" width="1022" height="737" key="SettingsEditor/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072447237" />
+    <state x="682" y="208" width="1022" height="737" key="SettingsEditor/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598179872331" />
     <state x="1009" y="464" width="540" height="524" key="StructurePopup" timestamp="1597233077353">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -484,10 +528,10 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1113" y="605" width="324" height="264" key="VCS.EditChangelistDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072767158" />
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597927375053">
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597936245150">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597927375053" />
+    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597936245150" />
     <state x="1121" y="605" width="377" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597235143606">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>

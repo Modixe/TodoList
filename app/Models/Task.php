@@ -10,9 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     public $timestamps = true;
-
     protected $table = 'tasks';
-
     protected $fillable = [
         'id',
         'list_id',
@@ -22,9 +20,8 @@ class Task extends Model
         'urgency'
     ];
 
-    public function task_list(){
-//        return $this->hasMany('App\Model\TaskListModel', 'id', 'list_id');
-        return $this->hasMany(TaskList::class, 'id',
-            'list_id');
+    public function taskList()
+    {
+        return $this->hasMany(TaskList::class, 'id', 'list_id');
     }
 }

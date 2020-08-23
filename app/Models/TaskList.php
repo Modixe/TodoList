@@ -10,16 +10,14 @@ use Illuminate\Database\Eloquent\Model;
 class TaskList extends Model
 {
     public $timestamps = true;
-
     protected $table = 'task_lists';
-
     protected $fillable = [
         'id',
         'name_list',
         'status'
     ];
 
-    public function task_id(){
+    public function taskId(){
         return $this->hasMany('App\Model\TasksModel', 'list_id', 'id');
     }
 }
