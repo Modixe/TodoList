@@ -51,7 +51,7 @@ class TaskController extends Controller
      * @param Task $task
      * @return Task|JsonResponse|object
      */
-    public function show(TaskList $taskList, Task $task)
+    public function show(Task $task)
     {
         return Task::findOrFail($task->id);
     }
