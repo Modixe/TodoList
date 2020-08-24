@@ -31,7 +31,7 @@ class TaskController extends Controller
      * @param TaskList $task_list
      * @return Response
      */
-    public function store(Request $request,TaskList $task_list)
+    public function store(Request $request, TaskList $task_list)
     {
         return response(
             Task::create([
