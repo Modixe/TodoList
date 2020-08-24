@@ -21,7 +21,7 @@ class Task extends Model
     ];
 
     /**
-     * Связь между списками
+     * Связь между таблица task_list(id) и task(list_id) 
      */
     public function taskList()
     {
