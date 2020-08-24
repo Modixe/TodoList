@@ -20,6 +20,9 @@ class Task extends Model
         'urgency'
     ];
 
+    /**
+     * Связь между списками
+     */
     public function taskList()
     {
         return $this->hasMany(TaskList::class, 'id', 'list_id');
