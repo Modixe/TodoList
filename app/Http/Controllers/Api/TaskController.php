@@ -53,7 +53,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return Task::findOrFail($task->id);
+        return $task;
     }
 
     /**
@@ -65,7 +65,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        $update_task = Task::findOrFail($task->id);
+        $update_task = $task;
         $update_task->update($request->only(
             'task_name',
             'description_task',
@@ -82,6 +82,6 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        Task::findOrFail($task->id)->delete();
+        $task->delete();
     }
 }
