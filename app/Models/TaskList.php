@@ -20,7 +20,8 @@ class TaskList extends Model
     /**
      * Связь между таблица task_list(id) и task(list_id) 
      */
-    public function taskId(){
+    public function taskId() 
+    {
         return $this->hasMany('App\Model\TasksModel', 'list_id', 'id');
     }
 }
