@@ -21,37 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7c6706-e560-4401-81e3-22dcd72c496b" name="todoList" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/passport/AuthorizedClients.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/passport/Clients.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/passport/PersonalAccessTokens.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TaskListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TaskList.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TaskList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +165,19 @@
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fjnleNN2xlURZdKpIPwWZmS1R3" />
@@ -234,7 +229,7 @@
       <workItem from="1597485878033" duration="42728000" />
       <workItem from="1597773509334" duration="10054000" />
       <workItem from="1598177242292" duration="46000" />
-      <workItem from="1598177323475" duration="2499000" />
+      <workItem from="1598177323475" duration="14815000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1597056030872</created>
@@ -397,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597936234739</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Каркас аунтификации">
+      <created>1598179919034</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1598179919034</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +457,8 @@
     <MESSAGE value="Рефактор кода 1.0" />
     <MESSAGE value="Рефактор кода 1.2" />
     <MESSAGE value="Рефактор кода 1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Рефактор кода 1.3" />
+    <MESSAGE value="Каркас аунтификации" />
+    <option name="LAST_COMMIT_MESSAGE" value="Каркас аунтификации" />
   </component>
   <component name="WindowStateProjectService">
     <state x="909" y="415" width="732" height="644" key="#Inspections" timestamp="1597772237080">
@@ -482,11 +485,11 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="100" y="127" width="2360" height="1213" key="DiffContextDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597075465777" />
-    <state x="1042" y="452" width="447" height="505" key="FileChooserDialogImpl" timestamp="1598179662455">
+    <state x="1042" y="452" width="424" height="520" key="FileChooserDialogImpl" timestamp="1598186703147">
       <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state x="1042" y="450" width="447" height="505" key="FileChooserDialogImpl/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597489243833" />
-    <state x="1042" y="452" key="FileChooserDialogImpl/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598179662455" />
+    <state x="1042" y="452" width="424" height="520" key="FileChooserDialogImpl/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598186703147" />
     <state x="1071" y="654" width="417" height="194" key="Github.CreateGistDialog" timestamp="1597073083804">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -528,10 +531,11 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1113" y="605" width="324" height="264" key="VCS.EditChangelistDialog/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072767158" />
-    <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597936245150">
-      <screen x="0" y="27" width="2560" height="1413" />
+    <state x="876" y="471" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598179927024">
+      <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state x="876" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597936245150" />
+    <state x="876" y="471" key="Vcs.Push.Dialog.v2/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598179927024" />
     <state x="1121" y="605" width="377" height="263" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597235143606">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -568,6 +572,10 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="923" y="321" width="672" height="677" key="run.anything.popup/0.27.2560.1413/2560.0.1920.1080@0.27.2560.1413" timestamp="1597072243497" />
+    <state x="943" y="351" width="672" height="678" key="search.everywhere.popup" timestamp="1598182161978">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state x="943" y="351" width="672" height="678" key="search.everywhere.popup/0.30.2560.1410/2560.0.1920.1080@0.30.2560.1410" timestamp="1598182161978" />
     <state x="1113" y="527" width="324" height="419" key="svn.repositoryBrowser" timestamp="1597073096687">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
