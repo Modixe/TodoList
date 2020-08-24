@@ -69,6 +69,6 @@ class TaskListController extends Controller
      */
     public function destroy(TaskList $task_list)
     {
-        TaskList::findOrFail($task_list->id)->delete();
+        $task_list->delete();
     }
 }
