@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property mixed id
+ * @property integer $id
+ * @property integer $list_id
+ * @property string  $task_name
+ * @property string  $state
+ * @property string  $urgency
+ * @property string  $description_task
  */
 class Task extends Model
 {
