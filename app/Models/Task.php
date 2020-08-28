@@ -26,7 +26,7 @@ class Task extends Model
     ];
 
     /**
-     * Связь между таблица task_list(id) и task(list_id) 
+     * Получить лист, на котором находится задача
      */
     public function taskList()
     {
