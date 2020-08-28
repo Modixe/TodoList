@@ -18,12 +18,4 @@ class TaskList extends Model
         'name_list',
         'status'
     ];
-    
-    /**
-     * получить задачу на данном листе
-     */
-    public function taskId() 
-    {
-        return $this->hasMany('App\Models\TasksModel', 'list_id', 'id');
-    }
 }
