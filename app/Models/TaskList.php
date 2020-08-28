@@ -20,7 +20,7 @@ class TaskList extends Model
     ];
     
     /**
-     * получить id задачи, на данном листе
+     * получить задачу на данном листе
      */
     public function taskId() 
     {
