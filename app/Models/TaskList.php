@@ -20,7 +20,7 @@ class TaskList extends Model
     ];
     
     /**
-     * Связь между таблица task_list(id) и task(list_id) 
+     * получить id задачи, на данном листе
      */
     public function taskId() 
     {
