@@ -27,6 +27,7 @@ class Task extends Model
 
     /**
      * Получить лист, на котором находится задача
+     * @property taskList
      */
     public function taskList()
     {
